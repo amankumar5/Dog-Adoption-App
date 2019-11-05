@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <active>true</active>
+        <api_name>x_356870_fetch.fetchUtils</api_name>
+        <client_callable>true</client_callable>
+        <description/>
+        <name>fetchUtils</name>
+        <script><![CDATA[    //this goes into the SCRIPT INCLUDE 
+
+var fetchUtils = Class.create();
+fetchUtils.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
+
+   createDog: function(){
+        var dogName = this.getParameter('sysparm_dog_name');
+        var dogAge = this.getParameter('sysparm_dog_age');
+        var dogShots = this.getParameter('sysparm_dog_shots');
+
+        //inserting the dogg
+
+        var newDog = new GlideRecord('x_356870_fetch_dogs');
+        newDog.newRecord();
+        newDog.name = dogName;
+        newDog.age = dogAge;
+        if(dogShots)
+        {
+            newDog.shots = true;
+        }
+
+        var dogNumber = newDog.number.getDisplayValue(); //this willl pass back to the client
+
+        var sysID = newDog.insert(); //this will hold the sysid of the newly created record
+                                    //this will insert the new dog and returns the sysID which will
+                                    //hold the sysid in the sysID variable
+        
+        var dogLink = newDog.getLink();
+
+        //return values
+
+        return dogName + '|' + dogNumber + '|' + dogLink;
+
+   },
+		createEmailNotofication : function() {
+			var adopterEmail = this.getParameter('sysparm_adopter_email');
+			var adoptionCenter = this.getParameter('sysparam_adoption_center');
+			var adoptionCenterEmail = '';
+			var ac = new GlideRecord('x_356870_fetch_adoption_center');
+			ac.get(adoptionCenter);
+			adoptionCenterEmail = ac.email.getDisplayValue();
+			gs.eventQueue('x_356870_fetch_adoption_email',ac,adoptionCenterEmail,adopterEmail);
+			return ;
+		},
+	
+    type: 'fetchUtils'
+});]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-09-22 15:02:31</sys_created_on>
+        <sys_id>a5b7a6e1db4000107ad847823996198d</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>fetchUtils</sys_name>
+        <sys_package display_value="Fetch" source="x_356870_fetch">298f5264db0000107ad84782399619a7</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Fetch">298f5264db0000107ad84782399619a7</sys_scope>
+        <sys_update_name>sys_script_include_a5b7a6e1db4000107ad847823996198d</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-09-22 16:25:25</sys_updated_on>
+    </sys_script_include>
+</record_update>

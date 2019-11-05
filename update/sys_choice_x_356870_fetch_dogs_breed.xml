@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_choice action="INSERT_OR_UPDATE" field="breed" table="x_356870_fetch_dogs" version="3">
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>breed</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>German Shepeard</label>
+            <language>en</language>
+            <name>x_356870_fetch_dogs</name>
+            <sequence>0</sequence>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2019-09-19 12:01:47</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>87a162acdb0000107ad8478239961992</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2019-09-19 12:01:47</sys_updated_on>
+            <value>German Shepeard</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>breed</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Husky</label>
+            <language>en</language>
+            <name>x_356870_fetch_dogs</name>
+            <sequence>0</sequence>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2019-09-19 12:01:08</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>e181aaacdb0000107ad84782399619df</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2019-09-19 12:01:08</sys_updated_on>
+            <value>husky</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>breed</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>LAB Cross</label>
+            <language>en</language>
+            <name>x_356870_fetch_dogs</name>
+            <sequence>0</sequence>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2019-09-19 12:02:35</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>3ad1a6acdb0000107ad84782399619f0</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2019-09-19 12:02:35</sys_updated_on>
+            <value>labcross</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>breed</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Labrador</label>
+            <language>en</language>
+            <name>x_356870_fetch_dogs</name>
+            <sequence>0</sequence>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2019-09-19 12:00:45</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>c6312eacdb0000107ad84782399619a5</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2019-09-19 12:00:45</sys_updated_on>
+            <value>labrador</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>breed</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>RodWhieler</label>
+            <language>en</language>
+            <name>x_356870_fetch_dogs</name>
+            <sequence>0</sequence>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2019-09-19 12:02:04</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>1bb1e6acdb0000107ad84782399619aa</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2019-09-19 12:02:04</sys_updated_on>
+            <value>rodwhieler</value>
+        </sys_choice>
+        <sys_choice_set action="INSERT_OR_UPDATE">
+            <element>breed</element>
+            <name>x_356870_fetch_dogs</name>
+            <sys_class_name>sys_choice_set</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2019-09-19 12:00:45</sys_created_on>
+            <sys_id>4c71a6acdb0000107ad84782399619ed</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>breed</sys_name>
+            <sys_package display_value="Fetch" source="x_356870_fetch">298f5264db0000107ad84782399619a7</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Fetch">298f5264db0000107ad84782399619a7</sys_scope>
+            <sys_update_name>sys_choice_x_356870_fetch_dogs_breed</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2019-09-19 12:00:45</sys_updated_on>
+        </sys_choice_set>
+    </sys_choice>
+</record_update>

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_page">
+    <sys_ui_page action="INSERT_OR_UPDATE">
+        <category>general</category>
+        <client_script><![CDATA[jQuery('#addDog').click(function() { //this creates a button and a event function
+    var ga = new GlideAjax('fetchutils');   //this is a glide ajax api
+    ga.addParam('sysparm_name', ' createDog'); 
+    ga.addParam('sysparm_dog_name',jQuery('#dogName').val()); //this provides 
+    //dog information as parameters in glide ajax request
+    ga.addParam('sysparm_dog_age',jQuery('#dogAge').val());
+    ga.addParam('sysparm_dog_shots',jQuery('#dogShots').is(':checked'));
+    ga.getXML(fetchBallback);
+
+});
+
+//building the call back funcion
+
+function fetchBallback(response)
+{
+    var answer = response. responseXML.documentElement.getAttribute('answer').split('|');
+    jQuery('#msg').append('<p>'+ answer[0]+'has successfully been created. DOG ID :' +answer[1] +'</p><br/><a href = "' + answer[2]+'">View new dog</a>' );
+}
+]]></client_script>
+        <description/>
+        <direct>true</direct>
+        <endpoint>x_356870_fetch_Create Dog.do</endpoint>
+        <html><![CDATA[<?xml version="1.0" encoding="utf-8" ?>
+<j:jelly trim="false" xmlns:j="jelly:core" xmlns:g="glide" xmlns:j2="null" xmlns:g2="null">
+
+
+        <h1> Add a new dog</h1>
+
+             <form class = "form-horizontal">
+                <div class = "form-group">
+                    <lable for = "dogName" class = "col-sm-2 control-lable"> Name of dog :</lable>	
+                    <div class = "col-sm-4">
+                    <input type = "text" class = "form-control" id ="dogname"/>
+                </div>
+                </div>
+                <div class = "form-group">
+                    <lable for = "dogAge" class = "col-sm-2 control-lable"> Age of dog :</lable>	
+                    <div class = "col-sm-4">
+                    <input type = "text" class = "form-control" id ="dogAge"/>
+                </div>
+					</div>
+                <div>
+                <div class = "form-group">
+                    <div class = "col-sm-offset-2 col-sm-10">
+                    <div class = "checkbox">
+                    <lable><input id ="dogShots" type ="checkbox"/>dogShots</lable>
+                    </div>
+                </div>
+            </div>
+					</div>
+					
+                </form>
+
+                <button id = "addDog" class ="btn btn -default "> Add Dog</button>
+
+                <div id = "msg"></div>
+
+
+</j:jelly>]]></html>
+        <name>Create Dog</name>
+        <processing_script/>
+        <sys_class_name>sys_ui_page</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-09-22 14:16:49</sys_created_on>
+        <sys_id>f8a7d6a9db0000107ad847823996199a</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>Create Dog</sys_name>
+        <sys_package display_value="Fetch" source="x_356870_fetch">298f5264db0000107ad84782399619a7</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Fetch">298f5264db0000107ad84782399619a7</sys_scope>
+        <sys_update_name>sys_ui_page_f8a7d6a9db0000107ad847823996199a</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-09-22 16:05:38</sys_updated_on>
+    </sys_ui_page>
+</record_update>
